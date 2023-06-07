@@ -13,16 +13,16 @@
         <nav>
             <img src="./img/logo.png" alt="">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#formulario">Personajes</a></li>
+                <li><a href="#home" id="button-home">Home</a></li>
+                <li><a href="#formulario" id="button-form">Personajes</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="titulo-app">Crud Heores</h1>
-        <section id="home">
+        <h1 class="titulo-app" id="titulo-app">Crud Heores</h1>
+        <section id="home" class="hidden">
             
         </section>
         <section class="seccion-formulario" id="formulario">
@@ -46,12 +46,13 @@
                     <select id="select-arma" name="select">
     
                     </select>
-                    <p>
+                    <div class="contenedor-botones">
                     <button class="guardar boton" id="guardar">
                         <img src="/img/disk.png" alt=""> Guardar
                     </button>
                     <input type="button" value="Eliminar" class="eliminar boton hidden-btn" id="button">
-                    <input type="button" value="Cancelar" class="cancelar boton hidden-btn" id="button-cancel"></p>
+                    <input type="button" value="Cancelar" class="cancelar boton hidden-btn" id="button-cancel">
+                    <div>
                 </div>
             </form>
         </section>
