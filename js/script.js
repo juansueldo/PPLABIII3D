@@ -7,11 +7,14 @@ const listaSuperheroes = JSON.parse(localStorage.getItem("superheroes")) || [];
 
 const $seccionTabla = document.getElementById("tabla");
 const $formulario = document.forms[0];
+const $form = document.getElementById("formulario");
+const $home = document.getElementById("home");
 const $button = document.getElementById("button");
 const $buttonCancel = document.getElementById("button-cancel");
 const $titulo = document.getElementById("titulo");
 const $select = document.getElementById("select-arma");
-
+const $buttonHome = document.getElementById("button-home");
+const $buttonForm = document.getElementById("button-form");
 const armas = ["Armadura", "Espada", "Martillo", "Escudo", "Arma de Fuego", "Flechas"];
 
 window.onload = () => {
@@ -20,8 +23,19 @@ window.onload = () => {
         $option.value = arma;
         $option.textContent = arma;
         $select.appendChild($option);
+        crearCard(listaSuperheroes);
       });
 }
+$buttonHome.addEventListener("click", (e)=>{
+    
+    $home.classList.remove("hidden");
+    $form.classList.add("hidden");
+});
+
+$buttonForm.addEventListener("click", (e)=>{
+    $form.classList.remove("hidden");
+    $home.classList.add("hidden");
+});
 window.addEventListener("click", (e)=>{
     
     if(e.target.matches("td")){
