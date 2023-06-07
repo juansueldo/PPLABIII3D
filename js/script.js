@@ -12,10 +12,13 @@ const $home = document.getElementById("home");
 const $button = document.getElementById("button");
 const $buttonCancel = document.getElementById("button-cancel");
 const $titulo = document.getElementById("titulo");
+const $tituloApp = document.getElementById("titulo-app");
 const $select = document.getElementById("select-arma");
 const $buttonHome = document.getElementById("button-home");
 const $buttonForm = document.getElementById("button-form");
 const armas = ["Armadura", "Espada", "Martillo", "Escudo", "Arma de Fuego", "Flechas"];
+
+
 
 window.onload = () => {
     armas.forEach((arma) => {
@@ -27,14 +30,15 @@ window.onload = () => {
       });
 }
 $buttonHome.addEventListener("click", (e)=>{
-    
     $home.classList.remove("hidden");
     $form.classList.add("hidden");
+    $tituloApp.textContent = "Informacion Heores";
 });
 
 $buttonForm.addEventListener("click", (e)=>{
     $form.classList.remove("hidden");
     $home.classList.add("hidden");
+    $tituloApp.textContent = "Crud Heroes";
 });
 window.addEventListener("click", (e)=>{
     
