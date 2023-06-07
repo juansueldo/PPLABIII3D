@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Heroes</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./img/logo.png" alt="">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#formulario">Personajes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="titulo-app">Crud Heores</h1>
+        <section id="home">
+            
+        </section>
+        <section class="seccion-formulario" id="formulario">
+            <form>
+                <div class="container-form">
+                    <input type="text" name="txtId" hidden>
+                    <h2 id="titulo">Informacion del SuperHeroe</h2>
+                    <p><label>Nombre</label></p>
+                    <p><input type="text" name="txtNombre" placeholder="Ingrese nombre"></p>
+                    <p><img src="/img/detective.png" alt=""><label>Alias</label></p>
+                    <p><input type="text" name="txtAlias" placeholder="Ingrese alter-ego"></p>
+                    <p><img src="/img/comic-book.png" alt=""><label>Editorial</label></p>
+                    <div class="buttons">
+                        <img class="icon" src="/img/dc.png" alt=""><input type="radio" name="rdoEditorial" value="DC" id="" checked>
+                        <img class="icon" src="/img/marvel.png" alt=""><input type="radio" name="rdoEditorial" value="Marvel" id="">
+                    </div>
+                    
+                    <p><img src="/img/management.png" alt=""><label>Fuerza:</label></p>
+                    <p><input type="range" name="txtFuerza" min="0" max="1000" value="500"></p>
+                    <p><img src="/img/fighting.png" alt=""><label>Arma:</label></p>
+                    <select id="select-arma" name="select">
+    
+                    </select>
+                    <p>
+                    <button class="guardar boton" id="guardar">
+                        <img src="/img/disk.png" alt=""> Guardar
+                    </button>
+                    <input type="button" value="Eliminar" class="eliminar boton hidden-btn" id="button">
+                    <input type="button" value="Cancelar" class="cancelar boton hidden-btn" id="button-cancel"></p>
+                </div>
+            </form>
+        </section>
+        <section class="seccion-tabla">
+            <div id="spinner" class="spinner"> <img src="/img/spinner.png" alt=""></div>
+            <div id="tabla"></div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Personajes</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p class="txt-footer">Laboratorio III - Todos los derechos reservados &copy;</p>
+    </footer>
+    <script src="./js/script.js" type="module"></script>
+    <script src="/js/superheroes.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/2d78131b00.js" crossorigin="anonymous"></script>
+</body>
+</html>
